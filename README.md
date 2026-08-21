@@ -1,19 +1,32 @@
 # ECC
 
-This repo vendors the [ECC](https://github.com/affaan-m/ECC) Claude Code toolkit as project-level configuration under `.claude/`, so Claude Code loads it automatically whenever this repo is opened — no `/plugin` install step needed.
+This repo has the [ECC](https://github.com/affaan-m/ECC) Claude Code plugin properly installed at **project scope** via the `claude plugin` CLI — the same outcome as running `/plugin marketplace add` + `/plugin install ecc@ecc` interactively, but done through the CLI since the `/plugin` slash command isn't available in Claude Code on the web.
 
-## What's included
+## How it works
 
-- `.claude/skills/` — 286 skills
-- `.claude/agents/` — 68 subagents
-- `.claude/commands/` — 97 slash commands
-- `.claude/rules/` — language/stack-specific rules
-- `.claude/ecc-hooks/` — the original `hooks/` and `scripts/` from ECC, vendored **for reference only**. They are **not wired into `.claude/settings.json`** and will not run as-is: they depend on Node dependencies (`npm install` inside `.claude/ecc-hooks/`) and on a `CLAUDE_PLUGIN_ROOT` resolution path designed for a real plugin install. Treat this as source to adapt, not a working feature.
-- `.claude/ECC-CLAUDE.md` — ECC's own project instructions, kept for reference
-- `.claude/ECC-LICENSE` — ECC's MIT license (attribution for the vendored content)
+`.claude/settings.json` declares the marketplace and the enabled plugin:
+
+```json
+{
+  "enabledPlugins": { "ecc@ecc": true },
+  "extraKnownMarketplaces": {
+    "ecc": { "source": { "source": "git", "url": "https://github.com/affaan-m/ECC.git" } }
+  }
+}
+```
+
+Anyone who opens this repo in Claude Code gets the `ecc` marketplace and the `ecc@ecc` plugin automatically — 286 skills, 68 agents, 97 commands, rules, and hooks (7 hook types: PreToolUse, PreCompact, SessionStart, PostToolUse, PostToolUseFailure, Stop, SessionEnd). The actual plugin package is fetched and cached locally by Claude Code on each machine (like `node_modules` for `package.json`) — nothing bulky is committed to this repo.
+
+## Hook profile
+
+The plugin's hook automation profile (`off` / `minimal` / `standard` / `strict`) is **personal, per-machine configuration** — it doesn't travel with the repo. Set yours with:
+
+```
+claude plugin install ecc@ecc --config hook_profile=standard
+```
+
+(`standard` is the default if you don't set anything.)
 
 ## Source
 
-Vendored from https://github.com/affaan-m/ECC (MIT licensed), version 2.2.0, on 2026-08-21.
-
-To get updates, re-sync the relevant directories from upstream, or install the plugin normally via `/plugin marketplace add https://github.com/affaan-m/ECC` + `/plugin install ecc@ecc` in an interactive Claude Code CLI session (this only works locally, not in Claude Code on the web).
+https://github.com/affaan-m/ECC (MIT licensed), v2.2.0.
