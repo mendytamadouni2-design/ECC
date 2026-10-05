@@ -1,9 +1,13 @@
 # Point de départ des sessions
 
 Ce dépôt (ECC) ne contient pas de code : c'est le point de départ des sessions Claude Code de l'utilisateur.
-Le vrai projet est **Cartoon Instructeur** : `mendytamadouni2-design/cartoon-instructeur`.
+Toutes les sessions ne concernent pas forcément le même projet.
 
-Au début de chaque session, avant tout le reste :
+## Seulement si la session concerne Cartoon Instructeur
+
+Ce qui suit ne s'applique **que** si la demande de l'utilisateur porte sur Cartoon Instructeur (l'appli de vidéos
+pédagogiques animées, dépôt `mendytamadouni2-design/cartoon-instructeur`). Pour tout autre sujet, ignorer cette
+section, ne pas attacher ce dépôt et ne pas utiliser l'équipe ci-dessous. En cas de doute, demander à l'utilisateur.
 
 1. Attacher le dépôt avec l'outil `add_repo` (accès « push ») et le cloner dans `/home/user/cartoon-instructeur`.
 2. Lire `/home/user/cartoon-instructeur/CLAUDE.md` en entier : règles non négociables (publier sur `main`
@@ -11,8 +15,11 @@ Au début de chaque session, avant tout le reste :
    clé API…), architecture, tests, et le fonctionnement de l'équipe.
 3. Travailler sur la branche de travail de la session dans les deux dépôts.
 
-L'équipe de sous-agents (`.claude/agents/` : testeur, controleur-visuel, relecteur, chercheur) est une copie de
-celle de cartoon-instructeur, qui fait foi : toute modification se fait là-bas puis est recopiée ici à l'identique.
-La session principale est leur chef, et un chef impitoyable (voir le CLAUDE.md du projet).
+L'équipe de sous-agents (`.claude/agents/` : testeur, controleur-visuel, relecteur, chercheur) est dédiée à Cartoon
+Instructeur : ne jamais la solliciter pour un autre projet. C'est une copie de celle de cartoon-instructeur, qui fait
+foi : toute modification se fait là-bas puis est recopiée ici à l'identique. Sur ce projet, la session principale
+est leur chef, et un chef impitoyable (voir le CLAUDE.md du projet).
+
+## Toujours
 
 L'utilisateur est francophone et n'est pas technicien : lui répondre en français simple.
