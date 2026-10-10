@@ -15,11 +15,13 @@ section, ne pas attacher ce dépôt et ne pas utiliser l'équipe ci-dessous. En 
    clé API…), architecture, tests, et le fonctionnement de l'équipe.
 3. Travailler sur la branche de travail de la session dans les deux dépôts.
 
-L'équipe de sous-agents (`.claude/agents/` : testeur, controleur-visuel, relecteur, chercheur) et ses compétences
-(`.claude/skills/`, toutes marquées « Cartoon Instructeur uniquement ») sont dédiées à Cartoon Instructeur : ne jamais
-les solliciter pour un autre projet. Ce sont des copies de celles de cartoon-instructeur, qui font
-foi : toute modification se fait là-bas puis est recopiée ici à l'identique. Sur ce projet, la session principale
-est leur chef, et un chef impitoyable (voir le CLAUDE.md du projet).
+L'équipe de sous-agents (`.claude/agents/` : mini-agents relecteurs, rendeur, mesureur, chercheurs, enquêteur ; et quatre
+chefs d'équipe réservés aux gros audits) et ses compétences (`.claude/skills/`, toutes marquées « Cartoon Instructeur
+uniquement ») sont dédiées à Cartoon Instructeur : ne jamais les solliciter pour un autre projet. Ce sont des copies de
+celles de cartoon-instructeur, qui font foi : toute modification se fait là-bas puis est recopiée ici à l'identique
+(`verif.sh` le contrôle). Sur ce projet, la session principale envoie elle-même les mini-agents et en est le chef, un
+chef impitoyable (voir le CLAUDE.md du projet). Si l'utilisateur envoie un rapport de test (`rapport-test-….txt`),
+suivre « Analyser un rapport de test iPhone » du CLAUDE.md du projet.
 
 ## Toujours
 
