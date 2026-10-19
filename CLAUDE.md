@@ -21,7 +21,8 @@ uniquement ») sont dédiées à Cartoon Instructeur : ne jamais les solliciter 
 celles de cartoon-instructeur, qui font foi : toute modification se fait là-bas puis est recopiée ici à l'identique
 (`verif.sh` le contrôle). Sur ce projet, la session principale envoie elle-même les mini-agents et en est le chef, un
 chef impitoyable (voir le CLAUDE.md du projet). Si l'utilisateur envoie un rapport de test (`rapport-test-….txt`),
-suivre « Analyser un rapport de test iPhone » du CLAUDE.md du projet.
+suivre « Analyser un rapport de test iPhone » du CLAUDE.md du projet. S'il demande de regarder sa dernière vidéo
+(« regarde ma dernière vidéo »), suivre « Regarder la dernière vidéo de l'utilisateur » (boîte à vidéo, 9.2).
 
 ## Toujours
 
