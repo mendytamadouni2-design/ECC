@@ -69,6 +69,7 @@ fi
 
 # 5. moteur d'animation
 node tests/unit-motion.js > /tmp/verif-motion.log 2>&1 && ok "tests du moteur d'animation" || ko "tests du moteur d'animation (voir /tmp/verif-motion.log)"
+node tests/unit-sw.js > /tmp/verif-sw.log 2>&1 && ok "tests du service worker (hors ligne)" || ko "tests du service worker (voir /tmp/verif-sw.log)"
 
 echo "──────────"
 [ $FAIL = 0 ] && echo "VERDICT : ✅ $WARN avertissement(s)" || echo "VERDICT : ❌ $FAIL échec(s), $WARN avertissement(s)"
